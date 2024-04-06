@@ -1,0 +1,24 @@
+@media (max-width: 1200px) {
+  .skills {
+    &__wrapper {
+      grid-template: repeat(3, minmax(270px, auto)) / repeat(3, 270px);
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .skills {
+    &__wrapper {
+      grid-template: repeat(4, minmax(270px, auto)) / repeat(2, 270px);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .skills {
+    padding-top: 46px;
+    &__wrapper {
+      grid-template: repeat(4, minmax(270px, auto)) / repeat(1, 270px);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@media (max-width: 1200px) {
+  .reting {
+    &__wrapper {
+      grid-template: repeat(2, minmax(70px, auto)) / repeat(3, 300px);
+    }
+  }
+}
+@media (max-width: 992px) {
+  .reting {
+    &__wrapper {
+      grid-template: repeat(3, minmax(70px, auto)) / repeat(2, 300px);
+      justify-content: space-between;
+      gap: 40px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .reting {
+    margin-top: 60px;
+    &__wrapper {
+      grid-template: repeat(3, minmax(70px, auto)) / repeat(1, 300px);
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 576px) {
+    .reting{
+        margin-top: 40px;
+    }
+}

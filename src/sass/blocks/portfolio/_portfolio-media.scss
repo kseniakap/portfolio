@@ -1,0 +1,30 @@
+@media (max-width: 1200px) {
+  .portfolio {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      gap: 20px;
+      justify-content: center;
+      .horizontal,
+      .vertical {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
+ 
+  }
+}
+@media (max-width: 768px) {
+  .portfolio {
+    padding-top: 46px;
+  }
+}
+@media (max-width: 576px) {
+  .portfolio {
+   &__item{
+    .hidro{
+      object-fit: contain;
+    }
+   }
+  }
+}

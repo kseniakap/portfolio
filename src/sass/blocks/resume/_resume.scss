@@ -1,0 +1,77 @@
+.resume {
+  padding-top: 120px;
+  &__wrapper {
+    padding: 60px 65px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 436px);
+    gap: 45px 136px;
+  }
+  &__column {
+    &-title {
+      position: relative;
+      padding-left: 35px;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+        background-color: $main-color;
+        left: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+    li {
+      position: relative;
+      &:after {
+        content: "";
+        width: 1px;
+        height: calc(100% + 15.5px);
+        position: absolute;
+        top: -15.5px;
+        left: 6px;
+        background-color: black;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    &:before {
+      content: "";
+      height: 1px;
+      width: 43px;
+      position: absolute;
+      background-color: black;
+      top: 68.5px;
+      left: 7.5px;
+    }
+    &-top {
+      padding: 45px 0 0 100px;
+      position: relative;
+    }
+    &-location {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &-descr {
+      margin-top: 12px;
+      padding-left: 43px;
+    }
+    &-icon {
+      position: absolute;
+      top: 60px;
+      left: 12%;
+      padding: 5px 0 0 18px;
+      @include before_circle;
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+      }
+    }
+  }
+}

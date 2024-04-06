@@ -1,0 +1,30 @@
+@media (max-width: 1400px) {
+  .promo {
+    background-attachment: scroll;
+  }
+}
+@media (max-width: 768px) {
+  .promo {
+    &__title {
+      width: 300px;
+      line-height: 39px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .promo {
+    background: url("../img/bg1.webp") center (center / cover) no-repeat;
+    &__wrapper {
+      margin-top: 32px;
+      justify-content: center;
+    }
+    &__block {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+}

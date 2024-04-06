@@ -1,0 +1,49 @@
+@import "libs/bootstrap-reboot.min";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+@import "base/variables";
+@import "base/mixin";
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: $main-color;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+@import "blocks/titles";
+@import "blocks/promo/promo";
+@import "blocks/social-icons";
+@import "blocks/buttons";
+@import "blocks/sidepanel";
+@import "blocks/menu/menu";
+@import "blocks/about/about-me";
+@import "blocks/resume/resume";
+@import "blocks/skills/skills";
+@import "blocks/reting/reting";
+@import "blocks/portfolio/portfolio";
+@import "blocks/price/price";
+@import "blocks/contacts/contacts";
+@import "policy/policy";
+
+//media
+@import "blocks/media-all/media";
+@import "blocks/promo/promo-media";
+@import "blocks/menu/menu-media";
+@import "blocks/about/about-me-media";
+@import "blocks/resume/resume-media";
+@import "blocks/skills/skills-media";
+@import "blocks/reting/reting-media";
+@import "blocks/portfolio/portfolio-media";
+@import "blocks/price/price-media";
+@import "blocks/contacts/contacts-media";
+@import "policy/policy-media"

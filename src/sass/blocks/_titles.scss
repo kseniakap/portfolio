@@ -1,0 +1,43 @@
+.title {
+  color: black;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  &_fz14 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &_fz16 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &_fz20 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  &_fz24 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  &_fz36 {
+    font-size: 36px;
+  }
+  &_fz48 {
+    font-size: 48px;
+  }
+  &_main {
+    position: relative;
+    text-align: center;
+    @include before_circle;
+    &:before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}
+.subtitle_main {
+  text-align: center;
+}
+
