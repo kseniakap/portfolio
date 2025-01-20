@@ -7,6 +7,7 @@ const cleanCSS = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const ghPages = require("gulp-gh-pages");
+
 // Static server
 gulp.task("server", function () {
   browserSync.init({
@@ -16,6 +17,7 @@ gulp.task("server", function () {
   });
   gulp.watch("src/*.html").on("change", browserSync.reload);
 });
+
 gulp.task("styles", function () {
   return gulp
     .src("src/sass/**/*.+(scss|sass)")
@@ -47,12 +49,14 @@ gulp.task("watch", function () {
   gulp.watch("src/icons/**/*").on("add", gulp.parallel("icons"));
   gulp.watch("src/img/**/*").on("add", gulp.parallel("images"));
 });
+
 gulp.task("html", function () {
   return gulp
     .src("src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("dist/"));
 });
+
 gulp.task("scripts", function () {
   return gulp
     .src("src/js/**/*.js")
@@ -82,19 +86,25 @@ gulp.task("images", function () {
     .pipe(browserSync.stream());
 });
 
+
 gulp.task(
-  "default",
-  gulp.parallel(
-    "watch",
-    "server",
-    "styles",
-    "scripts",
-    "fonts",
-    "icons",
-    "html",
-    "images"
-  )
+    "default",
+    gulp.parallel(
+        "watch",
+        "server",
+        "styles",
+        "scripts",
+        "fonts",
+        "icons",
+        "html",
+        "images"
+    )
 );
+
 gulp.task("deploy", function () {
-  return gulp.src("./dist/**/*").pipe(ghPages());
+    return gulp.src("./dist/**/*")
+        .pipe(ghPages({
+            branch: 'gh-pages',
+            origin: 'origin'
+        }));
 });
