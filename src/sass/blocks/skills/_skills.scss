@@ -4,7 +4,6 @@
     margin-top: 60px;
     padding: 0 10px;
     display: grid;
-    // grid-template: repeat(2, minmax(270px, auto)) / repeat(4, 270px);
     grid-template: minmax(270px, auto) / repeat(3, 270px);
     grid-auto-rows: minmax(270px, auto);
     justify-content: center;
@@ -16,9 +15,8 @@
 
     &__img {
       display: flex;
-      align-items: center;
       min-height: 65px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
       width: 100px;
       height: 100px;
       object-fit: contain;
