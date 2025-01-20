@@ -6,7 +6,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
-const ghPages = require("gulp-gh-pages");
+const { exec } = require('child_process');
 
 // Static server
 gulp.task("server", function () {
@@ -98,11 +98,11 @@ gulp.task(
         "images"
     )
 );
-// Исправленный deploy task
-gulp.task("deploy", function() {
-    return gulp.src("./dist/**/*")
-        .pipe(ghPages({
-            branch: 'gh-pages',
-            origin: 'origin'
-        }));
+// Новый deploy task с использованием git
+gulp.task('deploy', function(cb) {
+    exec('git add dist && git commit -m "Deploy to gh-pages" && git subtree push --prefix dist origin gh-pages', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
 });
