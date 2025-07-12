@@ -1,8 +1,11 @@
 .promo {
-  min-height: 80vh;
-  background: url("../img/bg1.webp") center (80% / cover) no-repeat;
+  min-height: 80dvh;
+  background: url("../img/bg1.webp") center (center / cover) no-repeat;
   background-attachment: fixed;
   position: relative;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   &__block {
     position: absolute;
     left: 20%;

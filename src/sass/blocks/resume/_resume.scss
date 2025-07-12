@@ -25,7 +25,7 @@
   }
   ul {
     list-style-type: none;
-    li {
+    > li {
       position: relative;
       &:after {
         content: "";
